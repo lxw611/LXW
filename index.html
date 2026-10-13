@@ -674,44 +674,31 @@
 
         ctx.fillStyle = "#000000";
         ctx.font = "400 20px 'JetBrains Mono', monospace";
-        ctx.fillText("PERSONAL PROFILE", 52, 68);
+        ctx.fillText("PROFILE", 52, 80);
 
-        ctx.font = "700 62px 'PingFang SC', 'Hiragino Sans GB', 'Inter Tight', sans-serif";
-        ctx.fillText("LXW", 48, 148);
+        ctx.font = "700 96px 'Inter Tight', 'Helvetica Neue', sans-serif";
+        ctx.fillText("LXW", 48, 194);
 
         ctx.fillStyle = "#000000";
-        ctx.font = "500 26px 'PingFang SC', 'Hiragino Sans GB', 'Inter', sans-serif";
-        const titleY = wrapText(ctx, "AIGC PRODUCT MANAGER", 52, 196, 408, 34);
+        ctx.font = "500 30px 'Inter', 'Helvetica Neue', sans-serif";
+        ctx.fillText("AIGC PRODUCT MANAGER", 52, 256);
 
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 3;
         ctx.beginPath();
-        ctx.moveTo(52, titleY + 18);
-        ctx.lineTo(canvas.width - 52, titleY + 18);
+        ctx.moveTo(52, 292);
+        ctx.lineTo(canvas.width - 52, 292);
         ctx.stroke();
 
         ctx.fillStyle = "#000000";
-        ctx.font = "400 24px 'PingFang SC', 'Hiragino Sans GB', 'Inter', sans-serif";
-        let y = wrapText(
-          ctx,
-          "From script to final cut: turning AI generation into a controlled, measurable production loop.",
-          52,
-          titleY + 52,
-          408,
-          36
-        );
-
-        y += 18;
-        ctx.font = "500 22px 'JetBrains Mono', monospace";
-        ctx.fillText("AI DRAMA / PRD / PROMPT / RAG / CODEX", 52, y);
-
-        y += 48;
-        ctx.font = "400 21px 'JetBrains Mono', monospace";
-        ctx.fillText("LXW255085@GMAIL.COM", 52, y);
-        ctx.fillText("15266913883", 52, y + 34);
+        ctx.font = "400 26px 'Inter', 'Helvetica Neue', sans-serif";
+        ctx.fillText("FROM SCRIPT", 52, 356);
+        ctx.fillText("TO FINAL CUT.", 52, 398);
 
         ctx.font = "400 20px 'JetBrains Mono', monospace";
-        ctx.fillText("AIGC PRODUCT MANAGER", 52, canvas.height - 52);
+        ctx.fillText("LXW255085@GMAIL.COM", 52, canvas.height - 112);
+        ctx.fillText("15266913883", 52, canvas.height - 74);
+        ctx.fillText("KOREAN TOPIK 3 / JAPANESE N3", 52, canvas.height - 40);
 
         const texture = new THREE.CanvasTexture(canvas);
         texture.colorSpace = THREE.SRGBColorSpace;
