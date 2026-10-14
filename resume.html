@@ -71,6 +71,26 @@
       opacity: 0.78;
     }
 
+    .pdf-pages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4vw;
+      align-items: start;
+      padding: 26px 5vw 70px;
+    }
+
+    .pdf-page {
+      min-height: calc(100vh - 180px);
+      background: var(--white);
+    }
+
+    .pdf-page iframe {
+      display: block;
+      width: 100%;
+      height: calc(100vh - 180px);
+      border: 0;
+    }
+
     .page {
       min-height: calc(100vh - 180px);
       background: var(--white);
@@ -168,6 +188,17 @@
         min-height: 0;
         padding: 28px 24px;
       }
+
+      .pdf-pages {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .pdf-page,
+      .pdf-page iframe {
+        min-height: 0;
+        height: 72vh;
+      }
     }
   </style>
 </head>
@@ -179,94 +210,13 @@
 
   <section class="lang-block">
     <h2 class="lang-title">中文简历</h2>
-    <div class="resume-shell">
-      <section class="page">
-        <header class="page-header">
-          <h1>刘兴伟</h1>
-          <p>AIGC 产品经理 · 已离职</p>
-          <p>lxw255085@gmail.com · 13456836331 · 海外本科 - 大真大学</p>
-        </header>
-
-        <div class="section">
-          <h2>个人标签</h2>
-          <p>#AI 漫剧全链路产品设计  #数据驱动 / 跨团队协同  #3D 视觉制作出身  #AI Native  #B&amp;C 端产品设计  #产品评测  #PE 工程  #RAG  #Codex  #韩国市场 AIGC 本地化</p>
-        </div>
-
-        <div class="section">
-          <h2>个人优势</h2>
-          <p><strong>复合型专家人设</strong> 具备 2 年 3D 影视与产品动态广告经验，兼具海外 AI 产品化与 AI 漫剧工作流实战。深入理解内容创作者的需求，擅长把主观内容转化为可执行、可评测、可迭代的 AI 生成规则。</p>
-          <p><strong>0 到 1 实战能力</strong> 主导 AI 漫剧视频生成工作流从 0 到 1 闭环，覆盖从剧本到成片的全流程工具设计。通过深挖短剧内容生产链路痛点，持续优化工具操作体验与生产效率，达到将单集合格率在项目周期内 30 个点的提升。</p>
-          <p><strong>数据驱动</strong> 善于以北极星指标为核心，建立完成率、一致性、可用率、成本等指标体系和归因闭环，用数据下钻驱动产品迭代；曾将角色一致性从不足 60% 提升至 85%，严重 Badcase 率控制在 5% 以下。</p>
-          <p><strong>跨部门协同</strong> 擅长把指标口径变成跨团队共识语言，而不是靠立场拉扯：用 PRD 和数据看板拉齐团队，让需求、模型选择和迭代节奏都有数据依据，最终把版本迭代稳定在双周，单集制作周期缩短 40%。</p>
-        </div>
-
-        <div class="section">
-          <h2>工作经历</h2>
-          <div class="job">
-            <div class="job-head">
-              <strong>橙星梦工厂</strong>
-              <span>2025.06 - 2026.08</span>
-            </div>
-            <p>AI 产品经理 · AI 应用产研部</p>
-            <p><strong>产品规划</strong> 独立规划视频编排流程三阶段 Roadmap，针对“返工多、效率低”两大痛点，结合业务需求，制定高稳定、高可控、高交付的“三高”技术方案；服务 10 万+ 创作者，累计播放 100 亿+。</p>
-            <p><strong>评测体系构建</strong> 定位 Top 问题生成不可逆，建立了 4 层 Badcase 归因 + 5 项指标的量化体系；通过数据推动策略迭代，使角色一致性从不足 60% 提升至 85%，严重 Badcase 率控制在 5% 以下。</p>
-            <p><strong>跨团队协同</strong> 通过 PRD 拉齐团队，建立完成率、一致性、可用率、音画同步、成本 5 项指标数据通道，用数据驱动产品迭代和模型选择，并加快跨团队迭代周期为双周迭代。</p>
-          </div>
-
-          <div class="job">
-            <div class="job-head">
-              <strong>稿定 AI</strong>
-              <span>2024.08 - 2025.03</span>
-            </div>
-            <p>AI 产品经理实习 · AI 海外产研部</p>
-            <p><strong>产品战略规划</strong> 基于通用 AI 生图难满足韩国美妆商家的审美、韩文、合规、尺寸要求，先拆解四类诉求，再据平台规范推导出三节点链路，进而锁定 K-beauty、韩文合规、Coupang 尺寸三大约束。</p>
-            <p><strong>核心功能设计</strong> 从生成图审美偏欧美、韩文乱码、违禁词、尺寸不合规切入，反向调整 Prompt 与风格模板，再以前端模板与合规词库统一收口，沉淀 3 尺寸预设，把可用率从约 20% 提升约 80%。</p>
-            <p><strong>跨团队协同</strong> 针对规则分散、跨环节难复用，联合设计、研发、算法将词库与尺寸预设逐级收敛为标准组件，进而覆盖 3 个美妆类目、服务 50+ 家商家，最终留存率约 70%。</p>
-          </div>
-
-          <div class="job">
-            <div class="job-head">
-              <strong>韩国美妆跨境工作室</strong>
-              <span>2022.03 - 2024.08</span>
-            </div>
-            <p>3D 视觉设计</p>
-            <p><strong>内容制作经验</strong> 负责多个品牌国内外的 3D 渲染与动态广告，覆盖建模、材质、动画、渲染全流程。熟练运用 C4D、Blender、3ds Max、Houdini 等影视制作工具。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="page">
-        <header class="page-header">
-          <h1>项目经历</h1>
-          <p>AI 漫剧 · K-Beauty 本地化</p>
-        </header>
-
-        <div class="section">
-          <h2>橙星梦工厂 · AI 漫剧生成链路</h2>
-          <p><strong>背景</strong> 漫剧 / 短剧市场需求持续扩大，但传统链路依赖多个专业环节，协作成本高、周期长，且生成质量不稳定，容易造成返工。以“单集合格率”为北极星指标，构建一站式内容创作平台。</p>
-          <p><strong>场景共创与链路设计</strong> 深入内容制作团队对导演、分镜师、编剧等 5 类角色进行深度画像，拆解角色的日常工作流、核心诉求和典型痛点，确认内容生成的核心阻碍是“生成不可逆导致返工”，提出分节点工程化方案替代端到端方案。</p>
-          <p><strong>任务调度</strong> 根据用户生成等待时间长，需要批量化生产的痛点。设计了任务状态机和任务队列，支持夜间批量渲染、多剧集并行功能，将每日有效生产时长从 8 小时提升至 20 小时。</p>
-          <p><strong>评测与质量闭环</strong> 基于“能不能稳定交付”这一北极星，建立从剧本到成片的质量评测闭环，把主观生成质量转化为可量化、可归因、可复测的指标，支撑项目从 0 到 1 稳定交付。</p>
-          <p><strong>技术突破与效率提升</strong> 针对长视频中“人物换脸、服装突变”问题，把同一角色多镜头身份一致率从不足 60% 提升至 85%。把单集制作周期从天级缩短至小时级，产出率提升 3 倍。基于任务调度、资产复用和 Prompt 模板沉淀，单分钟生成算力成本从 100 到 120 元降至 60 到 70 元。</p>
-        </div>
-
-        <div class="section">
-          <h2>稿定 AI · 化妆品商品图海外 AI 产品化</h2>
-          <p><strong>背景</strong> 韩国跨境电商中，通用 AI 生图难以直接满足韩式叙事审美、韩文文字准确性、韩国化妆品广告合规，以及平台的尺寸规范，导致商品图无法直接上架。围绕韩国跨境美妆商家缺少专业设计资源的问题，建立高效、合规、韩式审美的本地化生成链路。</p>
-          <p><strong>链路设计</strong> 深入韩国跨境美妆商家，拆解审美、韩文、合规、尺寸诉求，确认通用 AI 生图难以上架；提出“AI 纯底图生成 + 前端韩文模板自动合成”分节点链路，商品图可用率约 20% 提升至约 80%。</p>
-          <p><strong>合规与平台规范</strong> 依据韩国化妆品广告法规与 Coupang 主图标准，把纯白背景、1:1 比例、文字安全区及医疗功效禁用语做成 Prompt 与模板硬约束，解决韩文乱码与违禁词，支撑单日批量生成约 100 张合规商品图。</p>
-          <p><strong>可用率 / 效率提升</strong> 解决 K-beauty 审美偏差、韩文乱码、广告违禁词与尺寸不合规四类问题，商品图可用率从约 20% 提升至约 80%，达到可直接上架标准。基于“AI 纯底图 + 前端韩文模板”分节点链路，商家排版时间缩短约 80%，单日批量生成约 100+ 合规商品图。</p>
-        </div>
-
-        <div class="section">
-          <h2>教育背景与技能</h2>
-          <p>大真大学 · 经营学 · 全日制本科 · 2026.02</p>
-          <p>
-            Prompt 工程、ComfyUI 工作流、ControlNet、生成质量评测与 Badcase 归因、
-            指标体系搭建、漏斗分析、Dify 实战、Claude Code / Codex 搭建 Demo。
-          </p>
-        </div>
-      </section>
+    <div class="pdf-pages">
+      <div class="pdf-page">
+        <iframe src="assets/resume.pdf#page=1" title="简历第1页"></iframe>
+      </div>
+      <div class="pdf-page">
+        <iframe src="assets/resume.pdf#page=2" title="简历第2页"></iframe>
+      </div>
     </div>
   </section>
 
