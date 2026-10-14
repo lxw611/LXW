@@ -249,6 +249,26 @@
       text-decoration: none;
     }
 
+    .resume-intro {
+      display: block;
+      margin-top: 76px;
+      max-width: 1040px;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .resume-intro p {
+      margin: 0 0 22px;
+      font-size: 1.04rem;
+      line-height: 1.78;
+      max-width: 880px;
+    }
+
+    .resume-intro:hover p {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
     .bio-link:hover p {
       text-decoration: underline;
       text-underline-offset: 5px;
@@ -541,21 +561,19 @@
 
     <section id="about">
       <div class="section-label">01 / PROFILE</div>
-      <h2 class="statement">I turn subjective creative work into measurable, repeatable AI production systems.</h2>
-      <div class="bio-grid">
-        <a class="bio-link" href="assets/resume.pdf" target="_blank" rel="noreferrer">
-          <p>
-            Hybrid AIGC product manager with two years of 3D visual production and
-            product motion advertising, overseas AI productization, and AI drama
-            workflow delivery. I turn subjective creative work into executable,
-            evaluable, and iterable AI generation rules.
-          </p>
-        </a>
+      <h2 class="statement">个人简介</h2>
+      <a class="resume-intro" href="resume.html">
+        <p>
+          Hybrid AIGC product manager with two years of 3D visual production and
+          product motion advertising, overseas AI productization, and AI drama
+          workflow delivery. I turn subjective creative work into executable,
+          evaluable, and iterable AI generation rules.
+        </p>
         <p>
           From 0 to 1 product design, Prompt engineering, model evaluation, Badcase
           attribution, PRD, prototyping and iteration, I own the complete loop.
         </p>
-      </div>
+      </a>
     </section>
 
     <section id="work">
