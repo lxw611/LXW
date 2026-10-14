@@ -771,6 +771,9 @@
       const dragPoint = new THREE.Vector3();
       const clock = new THREE.Clock();
       let dragCard = null;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      let didDrag = false;
       let elapsed = 0;
 
       function setPointer(event) {
@@ -796,6 +799,9 @@
         dragCard = pickCard(event);
         if (!dragCard) return;
 
+        dragStartX = event.clientX;
+        dragStartY = event.clientY;
+        didDrag = false;
         stage.classList.add("is-dragging");
         dragPlane.set(new THREE.Vector3(0, 0, 1), -dragCard.group.position.z);
         raycaster.setFromCamera(pointer, camera);
@@ -806,6 +812,12 @@
 
       renderer.domElement.addEventListener("pointermove", (event) => {
         if (!dragCard) return;
+        if (
+          Math.abs(event.clientX - dragStartX) > 6 ||
+          Math.abs(event.clientY - dragStartY) > 6
+        ) {
+          didDrag = true;
+        }
         setPointer(event);
         raycaster.setFromCamera(pointer, camera);
         dragPlane.set(new THREE.Vector3(0, 0, 1), -dragCard.group.position.z);
@@ -824,7 +836,12 @@
         }
       }
 
-      renderer.domElement.addEventListener("pointerup", releaseCard);
+      renderer.domElement.addEventListener("pointerup", (event) => {
+        if (dragCard && !didDrag) {
+          window.open("https://ai.fun.tv/ai-app", "_blank", "noopener");
+        }
+        releaseCard(event);
+      });
       renderer.domElement.addEventListener("pointercancel", releaseCard);
 
       function resize() {
